@@ -1,3 +1,9 @@
+"""
+Name: Henry Holman
+Lab time: thursday 2 pm
+"""
+
+
 def wordInRange():
     filename = input()
     first_char = input()
@@ -7,12 +13,12 @@ def wordInRange():
     for i in range(0, len(wordlist)):
         newterm = wordlist[i].strip()
         wordlist2.append(newterm)
-    for i in range(0, len(wordlist2)):
-        if wordlist2.index(f"{first_char}") <= i <= wordlist2.index(f"{second_char}"):
-            print(f"{wordlist2[i]} - in range")
-        else:
-            print(f"{wordlist2[i]} - not in range")
-    
+    for i in wordlist2:
+        if first_char <= i <= second_char:
+            print(f"{i} - in range")
+        else: 
+            print(f"{i} - not in range")
+   
 
 if __name__ == '__main__':
     wordInRange()
