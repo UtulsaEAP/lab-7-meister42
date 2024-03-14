@@ -18,10 +18,10 @@ class TestClass:
         all_outputs = captured.out
         with open("./Problem 3/report.txt") as f:
             lines = f.read()
-            assert all(x in lines for x in ["Barrett	Edan	70	45	59	F",
-                "Bradshaw	Reagan	96	97	88	A",
+            assert all(x in lines for x in ["Barrett	Edan    70  45	59	F",
+                "Bradshaw	Reagan  96	97	88	A",
                 "Charlton	Caius	73	94	80	B",
-                "Mayo	Tyrese	88	61	36	D",
+                "Mayo	Tyrese	88  61	36	D",
                 "Stern	Brenda	90	86	45	C",
 
                 "Averages: midterm1 83.40, midterm2 76.60, final 61.60"]), ERROR_MSG
