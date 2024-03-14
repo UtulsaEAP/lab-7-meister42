@@ -8,7 +8,7 @@ Lab Time: thursday 2 pm
 def courseGrade():
     
     # TODO: Declare any necessary variables here. 
-    filename = input("enter file name: \n")
+    filename = input()
     firstname = []
     lastname = []
     midterm1 = []
@@ -44,23 +44,23 @@ def courseGrade():
     midterm2_avg = sum(midterm2)/len(midterm2)
     final_avg = sum(final)/len(final)
     #output data into correct report file
-    if "1" in filename:
+    if "1" in str(filename):
         with open("report1.txt", "w") as outputfile:
             for i in range(0, len(studentinfo)):
-                outputfile.write(f"{lastname[i]}   {firstname[i]}   {midterm1[i]}   {midterm2[i]}   {final[i]}  {grade[i]}\n")
-            outputfile.write(f"\nAverages: midterm1 {midterm1_avg: .2f}, midterm2 {midterm2_avg: .2f}, final {final_avg: .2f}")
+                outputfile.write(f"{lastname[i]}\t{firstname[i]}\t{midterm1[i]}\t{midterm2[i]}\t{final[i]}\t{grade[i]}\n")
+            outputfile.write(f"\nAverages: midterm1{midterm1_avg: .2f}, midterm2{midterm2_avg: .2f}, final{final_avg: .2f}")
         open("report1.txt", "r")
-    elif "2" in filename:
+    elif "2" in str(filename):
         with open("report2.txt", "w") as outputfile:
             for i in range(0, len(studentinfo)):
-                outputfile.write(f"{lastname[i]}   {firstname[i]}   {midterm1[i]}   {midterm2[i]}   {final[i]}  {grade[i]}\n")
-            outputfile.write(f"\nAverages: midterm1 {midterm1_avg: .2f}, midterm2 {midterm2_avg: .2f}, final {final_avg: .2f}")
+                outputfile.write(f"{lastname[i]}\t{firstname[i]}\t{midterm1[i]}\t{midterm2[i]}\t{final[i]}\t{grade[i]}\n")
+            outputfile.write(f"\nAverages: midterm1{midterm1_avg: .2f}, midterm2{midterm2_avg: .2f}, final{final_avg: .2f}")
         open("report2.txt", "r")
     else:
         with open("report.txt", "w") as outputfile:
             for i in range(0, len(studentinfo)):
-                outputfile.write(f"{lastname[i]}   {firstname[i]}   {midterm1[i]}   {midterm2[i]}   {final[i]}  {grade[i]}\n")
-            outputfile.write(f"\nAverages: midterm1 {midterm1_avg: .2f}, midterm2 {midterm2_avg: .2f}, final {final_avg: .2f}")
+                outputfile.write(f"{lastname[i]}\t{firstname[i]}\t{midterm1[i]}\t{midterm2[i]}\t{final[i]}\t{grade[i]}\n")
+            outputfile.write(f"\nAverages: midterm1{midterm1_avg: .2f}, midterm2{midterm2_avg: .2f}, final{final_avg: .2f}")
         open("report.txt", "r")
 
  

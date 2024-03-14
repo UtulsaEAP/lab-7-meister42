@@ -7,7 +7,7 @@ Lab Time: Thursday 2 pm
 def fileNameChange():
     #get input
 
-    program = input("input program name\n")
+    program = input()
     with open(program, "r") as photolist:
         name_file = photolist.readlines()
         for line in range(0, len(name_file)):
